@@ -3,16 +3,26 @@ package org.example.swing.layout;
 import javax.swing.*;
 import java.awt.*;
 
-public class JpanelSample1 extends JFrame {
-    public JpanelSample1() {
+public class JpanelSample2 extends JFrame {
+    public JpanelSample2() {
         Container ct = getContentPane();
-        ct.setLayout(new FlowLayout());
-        ct.add(new JRadioButton("java"));
-        ct.add(new JRadioButton("jsp"));
-        ct.add(new JRadioButton("spring"));
-        ct.add(new JButton("java"));
-        ct.add(new JButton("jsp"));
-        ct.add(new JButton("spring"));
+        ct.setLayout(new BorderLayout());
+
+
+        JPanel jp1 = new JPanel();
+        jp1.setLayout(new GridLayout(3,1));
+        jp1.add(new JRadioButton("java"));
+        jp1.add(new JRadioButton("jsp"));
+        jp1.add(new JRadioButton("spring"));
+
+        JPanel jp2 = new JPanel();
+        jp2.setLayout(new GridLayout(3,1));
+        jp2.add(new JButton("java"));
+        jp2.add(new JButton("jsp"));
+        jp2.add(new JButton("spring"));
+
+        ct.add(jp1, BorderLayout.WEST);
+        ct.add(jp2, BorderLayout.EAST);
 
         setTitle("Jpanel Sample 1");
         setSize(300,500);
@@ -21,6 +31,6 @@ public class JpanelSample1 extends JFrame {
     }
 
     public static void main(String[] args) {
-        new JpanelSample1();
+        new JpanelSample2();
     }
 }

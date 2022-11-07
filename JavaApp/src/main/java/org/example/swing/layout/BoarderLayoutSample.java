@@ -7,6 +7,7 @@ public class BoarderLayoutSample extends JFrame {
     public BoarderLayoutSample() {
         Container ct = getContentPane();
         BorderLayout b1 = new BorderLayout(50,50);
+
         ct.setLayout(b1);
 
         ct.add(new JButton("right"), BorderLayout.EAST);
@@ -17,7 +18,7 @@ public class BoarderLayoutSample extends JFrame {
 
         setTitle("BorderLayout Sample");
         setSize(400, 300);
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 
