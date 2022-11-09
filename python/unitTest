@@ -1,0 +1,11 @@
+import unittest
+from mypkg import operation
+class TestMypkgMethod(unittest.TestCase):
+    def test_operationAdd(self):
+        self.assertEqual(operation.add(100,200), 300)
+    def test_exception(self):
+        self.assertIsInstance(10/0,ZeroDivisionError)
+        self.assert
+
+if __name__ == '__main__':
+    unittest.main()
